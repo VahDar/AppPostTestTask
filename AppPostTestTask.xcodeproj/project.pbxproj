@@ -14,6 +14,9 @@
 		FCFB80D92B8C8B2A0061804A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFB80D72B8C8B2A0061804A /* LaunchScreen.storyboard */; };
 		FCFB80E32B8C8D5E0061804A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80E22B8C8D5E0061804A /* Coordinator.swift */; };
 		FCFB80E62B8C95180061804A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80E52B8C95180061804A /* AppCoordinator.swift */; };
+		FCFD87062B8CDC90004A1FD9 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD87052B8CDC90004A1FD9 /* InjectionKey.swift */; };
+		FCFD87082B8CDDEE004A1FD9 /* InjectedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD87072B8CDDEE004A1FD9 /* InjectedValue.swift */; };
+		FCFD870A2B8CE163004A1FD9 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD87092B8CE163004A1FD9 /* Injected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		FCFB80DA2B8C8B2A0061804A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFB80E22B8C8D5E0061804A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FCFB80E52B8C95180061804A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FCFD87052B8CDC90004A1FD9 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		FCFD87072B8CDDEE004A1FD9 /* InjectedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValue.swift; sourceTree = "<group>"; };
+		FCFD87092B8CE163004A1FD9 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		FCFB80CB2B8C8B270061804A /* AppPostTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				FCFD87042B8CD81F004A1FD9 /* DI */,
 				FCFB80E12B8C8D110061804A /* Coordinator */,
 				FCFB80D02B8C8B270061804A /* ViewController.swift */,
 				FCFB80E42B8C94F40061804A /* Application */,
@@ -92,6 +99,16 @@
 				FCFB80E52B8C95180061804A /* AppCoordinator.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		FCFD87042B8CD81F004A1FD9 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				FCFD87052B8CDC90004A1FD9 /* InjectionKey.swift */,
+				FCFD87072B8CDDEE004A1FD9 /* InjectedValue.swift */,
+				FCFD87092B8CE163004A1FD9 /* Injected.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +182,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFB80E32B8C8D5E0061804A /* Coordinator.swift in Sources */,
+				FCFD87082B8CDDEE004A1FD9 /* InjectedValue.swift in Sources */,
+				FCFD87062B8CDC90004A1FD9 /* InjectionKey.swift in Sources */,
 				FCFB80D12B8C8B270061804A /* ViewController.swift in Sources */,
 				FCFB80E62B8C95180061804A /* AppCoordinator.swift in Sources */,
 				FCFB80CD2B8C8B270061804A /* AppDelegate.swift in Sources */,
 				FCFB80CF2B8C8B270061804A /* SceneDelegate.swift in Sources */,
+				FCFD870A2B8CE163004A1FD9 /* Injected.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
