@@ -13,6 +13,7 @@
 		FCFB80D62B8C8B2A0061804A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFB80D52B8C8B2A0061804A /* Assets.xcassets */; };
 		FCFB80D92B8C8B2A0061804A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFB80D72B8C8B2A0061804A /* LaunchScreen.storyboard */; };
 		FCFB80E32B8C8D5E0061804A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80E22B8C8D5E0061804A /* Coordinator.swift */; };
+		FCFB80E62B8C95180061804A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80E52B8C95180061804A /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FCFB80D82B8C8B2A0061804A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFB80DA2B8C8B2A0061804A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFB80E22B8C8D5E0061804A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FCFB80E52B8C95180061804A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				FCFB80E12B8C8D110061804A /* Coordinator */,
-				FCFB80CC2B8C8B270061804A /* AppDelegate.swift */,
-				FCFB80CE2B8C8B270061804A /* SceneDelegate.swift */,
 				FCFB80D02B8C8B270061804A /* ViewController.swift */,
+				FCFB80E42B8C94F40061804A /* Application */,
 				FCFB80E02B8C8CDA0061804A /* Resources */,
 			);
 			path = AppPostTestTask;
@@ -81,6 +82,16 @@
 				FCFB80E22B8C8D5E0061804A /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FCFB80E42B8C94F40061804A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FCFB80CC2B8C8B270061804A /* AppDelegate.swift */,
+				FCFB80CE2B8C8B270061804A /* SceneDelegate.swift */,
+				FCFB80E52B8C95180061804A /* AppCoordinator.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			files = (
 				FCFB80E32B8C8D5E0061804A /* Coordinator.swift in Sources */,
 				FCFB80D12B8C8B270061804A /* ViewController.swift in Sources */,
+				FCFB80E62B8C95180061804A /* AppCoordinator.swift in Sources */,
 				FCFB80CD2B8C8B270061804A /* AppDelegate.swift in Sources */,
 				FCFB80CF2B8C8B270061804A /* SceneDelegate.swift in Sources */,
 			);
