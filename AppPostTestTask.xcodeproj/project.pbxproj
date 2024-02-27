@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC101F022B8E013000DCD1CF /* PostsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F012B8E013000DCD1CF /* PostsListModel.swift */; };
+		FC101F052B8E02BD00DCD1CF /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */; };
 		FCFB80CD2B8C8B270061804A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80CC2B8C8B270061804A /* AppDelegate.swift */; };
 		FCFB80CF2B8C8B270061804A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80CE2B8C8B270061804A /* SceneDelegate.swift */; };
 		FCFB80D12B8C8B270061804A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80D02B8C8B270061804A /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		FC101F012B8E013000DCD1CF /* PostsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListModel.swift; sourceTree = "<group>"; };
+		FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
 		FCFB80C92B8C8B270061804A /* AppPostTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPostTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFB80CC2B8C8B270061804A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFB80CE2B8C8B270061804A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FC101F032B8E029700DCD1CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FCFB80C02B8C8B270061804A = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		FCFB80CB2B8C8B270061804A /* AppPostTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				FC101F032B8E029700DCD1CF /* View */,
 				FC101F002B8E00C200DCD1CF /* Model */,
 				FCFD87042B8CD81F004A1FD9 /* DI */,
 				FCFB80E12B8C8D110061804A /* Coordinator */,
@@ -196,6 +207,7 @@
 				FCFB80E32B8C8D5E0061804A /* Coordinator.swift in Sources */,
 				FCFD87082B8CDDEE004A1FD9 /* InjectedValue.swift in Sources */,
 				FCFD87062B8CDC90004A1FD9 /* InjectionKey.swift in Sources */,
+				FC101F052B8E02BD00DCD1CF /* PostViewCell.swift in Sources */,
 				FCFB80D12B8C8B270061804A /* ViewController.swift in Sources */,
 				FCFB80E62B8C95180061804A /* AppCoordinator.swift in Sources */,
 				FCFB80CD2B8C8B270061804A /* AppDelegate.swift in Sources */,
