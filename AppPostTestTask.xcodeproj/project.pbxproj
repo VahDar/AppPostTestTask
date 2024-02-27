@@ -12,7 +12,8 @@
 		FC101F082B8E35D800DCD1CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F072B8E35D800DCD1CF /* NetworkError.swift */; };
 		FC101F0A2B8E38BF00DCD1CF /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F092B8E38BF00DCD1CF /* RequestMethod.swift */; };
 		FC101F0C2B8E3A0E00DCD1CF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F0B2B8E3A0E00DCD1CF /* Endpoint.swift */; };
-		FC101F0E2B8E3C5D00DCD1CF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F0D2B8E3C5D00DCD1CF /* NetworkService.swift */; };
+		FC101F0E2B8E3C5D00DCD1CF /* NetworkHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F0D2B8E3C5D00DCD1CF /* NetworkHTTPClient.swift */; };
+		FC101F102B8E475F00DCD1CF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F0F2B8E475F00DCD1CF /* NetworkService.swift */; };
 		FCFB80CD2B8C8B270061804A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80CC2B8C8B270061804A /* AppDelegate.swift */; };
 		FCFB80CF2B8C8B270061804A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80CE2B8C8B270061804A /* SceneDelegate.swift */; };
 		FCFB80D12B8C8B270061804A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80D02B8C8B270061804A /* ViewController.swift */; };
@@ -31,7 +32,8 @@
 		FC101F072B8E35D800DCD1CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FC101F092B8E38BF00DCD1CF /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		FC101F0B2B8E3A0E00DCD1CF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		FC101F0D2B8E3C5D00DCD1CF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FC101F0D2B8E3C5D00DCD1CF /* NetworkHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHTTPClient.swift; sourceTree = "<group>"; };
+		FC101F0F2B8E475F00DCD1CF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FCFB80C92B8C8B270061804A /* AppPostTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPostTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFB80CC2B8C8B270061804A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFB80CE2B8C8B270061804A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +81,8 @@
 				FC101F072B8E35D800DCD1CF /* NetworkError.swift */,
 				FC101F092B8E38BF00DCD1CF /* RequestMethod.swift */,
 				FC101F0B2B8E3A0E00DCD1CF /* Endpoint.swift */,
-				FC101F0D2B8E3C5D00DCD1CF /* NetworkService.swift */,
+				FC101F0D2B8E3C5D00DCD1CF /* NetworkHTTPClient.swift */,
+				FC101F0F2B8E475F00DCD1CF /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -229,10 +232,11 @@
 				FC101F0C2B8E3A0E00DCD1CF /* Endpoint.swift in Sources */,
 				FCFD87062B8CDC90004A1FD9 /* InjectionKey.swift in Sources */,
 				FC101F0A2B8E38BF00DCD1CF /* RequestMethod.swift in Sources */,
-				FC101F0E2B8E3C5D00DCD1CF /* NetworkService.swift in Sources */,
+				FC101F0E2B8E3C5D00DCD1CF /* NetworkHTTPClient.swift in Sources */,
 				FC101F052B8E02BD00DCD1CF /* PostViewCell.swift in Sources */,
 				FCFB80D12B8C8B270061804A /* ViewController.swift in Sources */,
 				FCFB80E62B8C95180061804A /* AppCoordinator.swift in Sources */,
+				FC101F102B8E475F00DCD1CF /* NetworkService.swift in Sources */,
 				FCFB80CD2B8C8B270061804A /* AppDelegate.swift in Sources */,
 				FCFB80CF2B8C8B270061804A /* SceneDelegate.swift in Sources */,
 				FC101F082B8E35D800DCD1CF /* NetworkError.swift in Sources */,

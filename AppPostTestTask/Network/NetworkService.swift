@@ -8,32 +8,19 @@
 import Foundation
 
 protocol NetworkServiceProtocol {
-    func fetchData<T: Decodable>(from endpoint: String, responseType: T.Type) async throws -> T
+    func getPost() async throws -> PostsListModel
 }
 
-final class NetworkService: NetworkServiceProtocol {
+final class NetworkService: NetworkHTTPClient, NetworkServiceProtocol {
     
-    func fetchData<T: Decodable>(from endpoint: String, responseType: T.Type) async throws -> T {
-        
-        guard let url = URL(string: endpoint) else {
-            throw NetworkError.invalidURL
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = RequestMethod.get.rawValue
+    func getPost() async throws -> PostsListModel {
         do {
-            let (data, responce) = try await URLSession.shared.data(for: request)
-            guard let httpResponse = responce as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
-                throw NetworkError.requestFailed
-            }
-            do {
-                let decoderData = try JSONDecoder().decode(T.self, from: data)
-                return decoderData
-            } catch {
-                throw NetworkError.jsonParsingFailed
-            }
+            return try await fetchData(
+                from: Endpoint.list.path,
+                responseType: PostsListModel.self)
         } catch {
-            throw NetworkError.invalidData
+            print("Error fetching data: \(error.localizedDescription)")
+            throw error
         }
     }
 }
