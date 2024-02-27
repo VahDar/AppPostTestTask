@@ -10,6 +10,7 @@ import Foundation
 enum NetworkError: Error {
     case invalidURL
     case requestFailed
+    case invalidData
     case jsonParsingFailed
     case networkServiceUnvailable
 }

@@ -22,9 +22,7 @@ enum Endpoint {
     
     var method: RequestMethod {
         switch self {
-        case .list:
-            return .get
-        case .detail:
+        case .list, .detail:
             return .get
         }
     }
