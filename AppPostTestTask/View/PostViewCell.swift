@@ -10,7 +10,7 @@ import UIKit
 class PostViewCell: UITableViewCell {
     
     // MARK: - Properties
-    
+    private let isExpanded = false
     // MARK: - Views
     
     private let titleLabel: UILabel = {
@@ -44,7 +44,7 @@ class PostViewCell: UITableViewCell {
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }
+    }()
     
     private let timeshampLabel: UILabel = {
         let label = UILabel()
@@ -88,4 +88,48 @@ class PostViewCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
+    
+    //MARK: - Flow funcs
+    
+    func configure(with post: Post) {
+        SetupUI()
+        titleLabel.text = post.title
+        previewTextLabel.text = post.previewText
+        likesCountLabel.text = "\(post.likesCount)"
+        previewTextLabel.numberOfLines = isExpanded ? 0 : 2
+        expundButton.setTitle(isExpanded ? "Collapse" : "Expend" , for: .normal)
+    }
+    
+    private func SetupUI() {
+        likeImage.image = UIImage(named: "like")
+        
+
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+                contentView.addSubview(containerStack)
+                containerStack.addArrangedSubview(titleLabel)
+                containerStack.addArrangedSubview(previewTextLabel)
+                containerStack.addArrangedSubview(bottomStack)
+                likesStack.addArrangedSubview(likeImage)
+                likesStack.addArrangedSubview(likesCountLabel)
+                bottomStack.addArrangedSubview(likesStack)
+                bottomStack.addArrangedSubview(timeshampLabel)
+                containerStack.addArrangedSubview(expundButton)
+                
+                NSLayoutConstraint.activate([
+                    containerStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+                    containerStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+                    containerStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+                    containerStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+                    likeImage.widthAnchor.constraint(equalToConstant: 16),
+                    likeImage.heightAnchor.constraint(equalToConstant: 16)
+                ])
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
