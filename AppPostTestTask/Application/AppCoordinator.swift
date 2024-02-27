@@ -9,22 +9,26 @@ import Foundation
 import UIKit
 
 protocol AppCoordinatorProtocol: Coordinator {
-    var windowScene: UIWindow? { get }
+    var window: UIWindow? { get }
 }
 
 class AppCoordinator: AppCoordinatorProtocol {
     
-    var windowScene: UIWindow?
+    let window: UIWindow?
     var childCoordinator: [Coordinator] = []
     weak var parentCoordinator: Coordinator?
     var navigationController: UINavigationController
     
-    init(windowScene: UIWindow?) {
-        self.windowScene = windowScene
+    init(window: UIWindow?) {
+        self.window = window
         self.navigationController = UINavigationController()
     }
     
     func start() {
+        let viewController = ViewController()
+        navigationController.pushViewController(viewController, animated: true)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         
     }
     
