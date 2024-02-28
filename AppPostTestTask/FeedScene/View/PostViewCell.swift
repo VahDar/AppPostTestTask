@@ -10,8 +10,9 @@ import UIKit
 class PostViewCell: UITableViewCell {
     
     // MARK: - Properties
-    private let isExpanded = false
+    private var isExpanded = false
     var expandButtonHandler: (() -> Void)?
+    private let bottomLayoutGuide = UILayoutGuide()
     // MARK: - Views
     
     private let titleLabel: UILabel = {
@@ -97,14 +98,28 @@ class PostViewCell: UITableViewCell {
         titleLabel.text = post.title
         previewTextLabel.text = post.previewText
         likesCountLabel.text = "\(post.likesCount)"
+        timeshampLabel.text = "\(post.timeshamp.daysAgo())"
         previewTextLabel.numberOfLines = isExpanded ? 0 : 2
         expundButton.setTitle(isExpanded ? "Collapse" : "Expend" , for: .normal)
+        
+        if previewTextLabel.text?.count ?? 0 <= 100 {
+            expundButton.isHidden = true
+        } else {
+            expundButton.isHidden = false
+        }
     }
     
     private func SetupUI() {
         likeImage.image = UIImage(named: "like")
-        
-
+        expundButton.addTarget(self, action: #selector(expundButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func expundButtonTapped() {
+        isExpanded.toggle()
+        previewTextLabel.numberOfLines = isExpanded ? 0 : 2
+        previewTextLabel.layoutIfNeeded()
+        expundButton.setTitle(isExpanded ? "Colapse" : "Expand", for: .normal)
+        expandButtonHandler?()
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

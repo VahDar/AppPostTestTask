@@ -10,7 +10,7 @@ import UIKit
 class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Properties
-    var viewModel: ViewModelProtocol?
+    @Injected(\.viewModel) var viewModel
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,6 +28,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     // MARK: - View
+    
     private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(PostViewCell.self, forCellReuseIdentifier: String(describing: PostViewCell.self))
@@ -57,7 +58,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - FetchData
     private func fetchData() {
         Task {
-            await viewModel?.getLitData()
+            await viewModel.getLitData()
             tableView.reloadData()
         }
     }
@@ -65,12 +66,12 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - Setup TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel!.postData.count
+        return viewModel.postData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = PostViewCell(style: .default, reuseIdentifier: String(describing: PostViewCell.self))
-        let post = (viewModel?.postData[indexPath.row])!
+        let post = (viewModel.postData[indexPath.row])
         cell.selectionStyle = .none
         cell.expandButtonHandler = { [weak self] in
             self?.tableView.beginUpdates()
