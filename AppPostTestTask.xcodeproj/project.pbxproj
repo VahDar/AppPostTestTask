@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0B90312B8F7291004459B9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B90302B8F7291004459B9 /* ViewModel.swift */; };
 		FC101F022B8E013000DCD1CF /* PostsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F012B8E013000DCD1CF /* PostsListModel.swift */; };
 		FC101F052B8E02BD00DCD1CF /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */; };
 		FC101F082B8E35D800DCD1CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F072B8E35D800DCD1CF /* NetworkError.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC0B90302B8F7291004459B9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FC101F012B8E013000DCD1CF /* PostsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListModel.swift; sourceTree = "<group>"; };
 		FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
 		FC101F072B8E35D800DCD1CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC0B902F2B8F7214004459B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC0B90302B8F7291004459B9 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FC101F002B8E00C200DCD1CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		FC101F112B8E4BAC00DCD1CF /* FeedScene */ = {
 			isa = PBXGroup;
 			children = (
+				FC0B902F2B8F7214004459B9 /* ViewModel */,
 				FC101F122B8E4C1D00DCD1CF /* DI */,
 				FC101F002B8E00C200DCD1CF /* Model */,
 				FC101F032B8E029700DCD1CF /* View */,
@@ -251,6 +262,7 @@
 				FC101F0C2B8E3A0E00DCD1CF /* Endpoint.swift in Sources */,
 				FCFD87062B8CDC90004A1FD9 /* InjectionKey.swift in Sources */,
 				FC101F0A2B8E38BF00DCD1CF /* RequestMethod.swift in Sources */,
+				FC0B90312B8F7291004459B9 /* ViewModel.swift in Sources */,
 				FC101F142B8E4C3700DCD1CF /* NetworkServiceKey.swift in Sources */,
 				FC101F0E2B8E3C5D00DCD1CF /* NetworkHTTPClient.swift in Sources */,
 				FC101F052B8E02BD00DCD1CF /* PostViewCell.swift in Sources */,
