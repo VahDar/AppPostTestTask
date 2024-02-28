@@ -20,11 +20,13 @@ final class MainScreenCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let viewController = PostViewController()
+        viewController.viewModel = viewModel
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func finish() {
-        <#code#>
+        
     }
     
     

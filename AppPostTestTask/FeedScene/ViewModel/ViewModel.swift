@@ -9,6 +9,7 @@ import Foundation
 
 protocol ViewModelProtocol {
     var postData: [Post] { get set }
+    func getLitData() async
     
 }
 
@@ -17,13 +18,9 @@ final class ViewModel: ViewModelProtocol {
     @Injected(\.networkService) var networkService
     var postData: [Post] = []
     
-    init() {
-        Task {
-            await getLitData()
-        }
-    }
     
-    private func getLitData() async {
+    
+     func getLitData() async {
         do {
             if let data = try await networkService.getPost().posts  {
                 postData = data

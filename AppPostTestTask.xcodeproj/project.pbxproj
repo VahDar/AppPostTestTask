@@ -21,7 +21,6 @@
 		FC101F142B8E4C3700DCD1CF /* NetworkServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F132B8E4C3700DCD1CF /* NetworkServiceKey.swift */; };
 		FCFB80CD2B8C8B270061804A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80CC2B8C8B270061804A /* AppDelegate.swift */; };
 		FCFB80CF2B8C8B270061804A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80CE2B8C8B270061804A /* SceneDelegate.swift */; };
-		FCFB80D12B8C8B270061804A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80D02B8C8B270061804A /* ViewController.swift */; };
 		FCFB80D62B8C8B2A0061804A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFB80D52B8C8B2A0061804A /* Assets.xcassets */; };
 		FCFB80D92B8C8B2A0061804A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFB80D72B8C8B2A0061804A /* LaunchScreen.storyboard */; };
 		FCFB80E32B8C8D5E0061804A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFB80E22B8C8D5E0061804A /* Coordinator.swift */; };
@@ -47,7 +46,6 @@
 		FCFB80C92B8C8B270061804A /* AppPostTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPostTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFB80CC2B8C8B270061804A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFB80CE2B8C8B270061804A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCFB80D02B8C8B270061804A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCFB80D52B8C8B2A0061804A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCFB80D82B8C8B2A0061804A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFB80DA2B8C8B2A0061804A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				FC101F062B8E35B100DCD1CF /* Network */,
 				FCFD87042B8CD81F004A1FD9 /* DI */,
 				FCFB80E12B8C8D110061804A /* Coordinator */,
-				FCFB80D02B8C8B270061804A /* ViewController.swift */,
 				FCFB80E42B8C94F40061804A /* Application */,
 				FCFB80E02B8C8CDA0061804A /* Resources */,
 			);
@@ -284,7 +281,6 @@
 				FC101F142B8E4C3700DCD1CF /* NetworkServiceKey.swift in Sources */,
 				FC101F0E2B8E3C5D00DCD1CF /* NetworkHTTPClient.swift in Sources */,
 				FC101F052B8E02BD00DCD1CF /* PostViewCell.swift in Sources */,
-				FCFB80D12B8C8B270061804A /* ViewController.swift in Sources */,
 				FC0B90362B8F7AA8004459B9 /* ViewModelKey.swift in Sources */,
 				FCFB80E62B8C95180061804A /* AppCoordinator.swift in Sources */,
 				FC101F102B8E475F00DCD1CF /* NetworkService.swift in Sources */,

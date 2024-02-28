@@ -20,7 +20,7 @@ extension NetworkHTTPClient {
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = RequestMethod.get.rawValue
+        request.httpMethod = Endpoint.list.method.rawValue
         do {
             let (data, responce) = try await URLSession.shared.data(for: request)
             guard let httpResponse = responce as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {

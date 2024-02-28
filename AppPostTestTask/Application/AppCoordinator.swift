@@ -25,14 +25,18 @@ class AppCoordinator: AppCoordinatorProtocol {
     }
     
     func start() {
-        let viewController = ViewController()
-        navigationController.pushViewController(viewController, animated: true)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
+        PostScene()
     }
     
     func finish() {
         
+    }
+    
+    private func PostScene() {
+        let coordinator = MainScreenCoordinator(navigationController: navigationController)
+        childCoordinator.append(coordinator)
+        coordinator.start()
     }
 }

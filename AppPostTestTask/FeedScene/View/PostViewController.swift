@@ -15,10 +15,17 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchData()
+        setupUI()
+        tableView.dataSource = self
+        tableView.delegate = self
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        constraints()
+    }
 
     // MARK: - View
     private var tableView: UITableView = {
@@ -45,6 +52,14 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    // MARK: - FetchData
+    private func fetchData() {
+        Task {
+            await viewModel?.getLitData()
+            tableView.reloadData()
+        }
     }
     
     // MARK: - Setup TableView
