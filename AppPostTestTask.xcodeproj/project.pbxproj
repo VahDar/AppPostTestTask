@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC0B90312B8F7291004459B9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B90302B8F7291004459B9 /* ViewModel.swift */; };
+		FC0B90342B8F791D004459B9 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B90332B8F791D004459B9 /* MainScreenCoordinator.swift */; };
 		FC101F022B8E013000DCD1CF /* PostsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F012B8E013000DCD1CF /* PostsListModel.swift */; };
 		FC101F052B8E02BD00DCD1CF /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */; };
 		FC101F082B8E35D800DCD1CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F072B8E35D800DCD1CF /* NetworkError.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		FC0B90302B8F7291004459B9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FC0B90332B8F791D004459B9 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
 		FC101F012B8E013000DCD1CF /* PostsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListModel.swift; sourceTree = "<group>"; };
 		FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
 		FC101F072B8E35D800DCD1CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FC0B90322B8F7625004459B9 /* MainScreenCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FC0B90332B8F791D004459B9 /* MainScreenCoordinator.swift */,
+			);
+			path = MainScreenCoordinator;
+			sourceTree = "<group>";
+		};
 		FC101F002B8E00C200DCD1CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		FC101F112B8E4BAC00DCD1CF /* FeedScene */ = {
 			isa = PBXGroup;
 			children = (
+				FC0B90322B8F7625004459B9 /* MainScreenCoordinator */,
 				FC0B902F2B8F7214004459B9 /* ViewModel */,
 				FC101F122B8E4C1D00DCD1CF /* DI */,
 				FC101F002B8E00C200DCD1CF /* Model */,
@@ -271,6 +282,7 @@
 				FC101F102B8E475F00DCD1CF /* NetworkService.swift in Sources */,
 				FCFB80CD2B8C8B270061804A /* AppDelegate.swift in Sources */,
 				FCFB80CF2B8C8B270061804A /* SceneDelegate.swift in Sources */,
+				FC0B90342B8F791D004459B9 /* MainScreenCoordinator.swift in Sources */,
 				FC101F082B8E35D800DCD1CF /* NetworkError.swift in Sources */,
 				FCFD870A2B8CE163004A1FD9 /* Injected.swift in Sources */,
 			);
