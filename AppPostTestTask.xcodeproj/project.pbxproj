@@ -10,6 +10,7 @@
 		FC0B90312B8F7291004459B9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B90302B8F7291004459B9 /* ViewModel.swift */; };
 		FC0B90342B8F791D004459B9 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B90332B8F791D004459B9 /* MainScreenCoordinator.swift */; };
 		FC0B90362B8F7AA8004459B9 /* ViewModelKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B90352B8F7AA8004459B9 /* ViewModelKey.swift */; };
+		FC0B903A2B8F7FB2004459B9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B90392B8F7FB2004459B9 /* PostViewController.swift */; };
 		FC101F022B8E013000DCD1CF /* PostsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F012B8E013000DCD1CF /* PostsListModel.swift */; };
 		FC101F052B8E02BD00DCD1CF /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */; };
 		FC101F082B8E35D800DCD1CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC101F072B8E35D800DCD1CF /* NetworkError.swift */; };
@@ -34,6 +35,7 @@
 		FC0B90302B8F7291004459B9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FC0B90332B8F791D004459B9 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
 		FC0B90352B8F7AA8004459B9 /* ViewModelKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelKey.swift; sourceTree = "<group>"; };
+		FC0B90392B8F7FB2004459B9 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		FC101F012B8E013000DCD1CF /* PostsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListModel.swift; sourceTree = "<group>"; };
 		FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
 		FC101F072B8E35D800DCD1CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				FC101F042B8E02BD00DCD1CF /* PostViewCell.swift */,
+				FC0B90392B8F7FB2004459B9 /* PostViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				FCFB80E32B8C8D5E0061804A /* Coordinator.swift in Sources */,
 				FCFD87082B8CDDEE004A1FD9 /* InjectedValue.swift in Sources */,
 				FC101F0C2B8E3A0E00DCD1CF /* Endpoint.swift in Sources */,
+				FC0B903A2B8F7FB2004459B9 /* PostViewController.swift in Sources */,
 				FCFD87062B8CDC90004A1FD9 /* InjectionKey.swift in Sources */,
 				FC101F0A2B8E38BF00DCD1CF /* RequestMethod.swift in Sources */,
 				FC0B90312B8F7291004459B9 /* ViewModel.swift in Sources */,

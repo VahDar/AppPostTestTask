@@ -13,14 +13,14 @@ final class MainScreenCoordinator: Coordinator {
     var childCoordinator: [Coordinator] = []
     var parentCoordinator: Coordinator?
     var navigationController: UINavigationController
-    
+    @Injected(\.viewModel) var viewModel
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        <#code#>
+        
     }
     
     func finish() {

@@ -11,6 +11,7 @@ class PostViewCell: UITableViewCell {
     
     // MARK: - Properties
     private let isExpanded = false
+    var expandButtonHandler: (() -> Void)?
     // MARK: - Views
     
     private let titleLabel: UILabel = {
