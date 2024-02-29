@@ -16,7 +16,7 @@ final class NetworkService: NetworkHTTPClient, NetworkServiceProtocol {
     func getPost() async throws -> PostsListModel {
         do {
             return try await fetchData(
-                from: Endpoint.list.path,
+                from: Endpoint.list.path, requestMethod: RequestMethod.get,
                 responseType: PostsListModel.self)
         } catch {
             print("Error fetching data: \(error.localizedDescription)")

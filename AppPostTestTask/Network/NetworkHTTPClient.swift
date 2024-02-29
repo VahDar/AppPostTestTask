@@ -8,19 +8,19 @@
 import Foundation
 
 protocol NetworkHTTPClient {
-    func fetchData<T: Decodable>(from endpoint: String, responseType: T.Type) async throws -> T
+    func fetchData<T: Decodable>(from endpoint: String, requestMethod: RequestMethod, responseType: T.Type) async throws -> T
 }
 
 extension NetworkHTTPClient {
     
-    func fetchData<T: Decodable>(from endpoint: String, responseType: T.Type) async throws -> T {
+    func fetchData<T: Decodable>(from endpoint: String, requestMethod: RequestMethod, responseType: T.Type) async throws -> T {
         
         guard let url = URL(string: endpoint) else {
             throw NetworkError.invalidURL
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = Endpoint.list.method.rawValue
+        request.httpMethod = requestMethod.rawValue
         do {
             let (data, responce) = try await URLSession.shared.data(for: request)
             guard let httpResponse = responce as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
