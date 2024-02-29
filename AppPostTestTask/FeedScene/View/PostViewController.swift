@@ -42,6 +42,25 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.backgroundColor = .white
         title = "Post"
         
+        let sortByDate = UIAction(title: "Sort by Date") { [weak self] action in
+            self?.viewModel.postData.sort { (post1, post2) -> Bool in
+                return post1.timeshamp > post2.timeshamp
+            }
+            self?.tableView.reloadData()
+        }
+        
+        let sortByLikes = UIAction(title: "Sort by Likes") { [weak self] action in
+            self?.viewModel.postData.sort(by: { (post1, post2) -> Bool in
+                return post1.likesCount > post2.likesCount
+            })
+            self?.tableView.reloadData()
+        }
+        
+        let menu = UIMenu(title: "Sort by", options: .displayInline, children: [sortByDate, sortByLikes])
+        
+        let barButton = UIBarButtonItem(image: UIImage(named: "sorting"), menu: menu)
+        
+        navigationItem.rightBarButtonItem = barButton
     }
     
     private func constraints() {
