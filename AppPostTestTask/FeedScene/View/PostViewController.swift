@@ -81,6 +81,17 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             await viewModel.getLitsData()
             tableView.reloadData()
         }
+        viewModel.toSelectedPost()
+    }
+    
+    func showDetailScreen(for post: Post) {
+        let detailVC = DetailScreenViewController()
+        detailVC.viewModel = viewModel
+        detailVC.viewModel.currentPost = post.postId
+        Task {
+            await detailVC.viewModel.getDetailScreen(id: post.postId)
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
     
     // MARK: - Setup TableView
@@ -106,4 +117,8 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         return UITableView.automaticDimension
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPost = viewModel.postData[indexPath.row]
+        showDetailScreen(for: selectedPost)
+    }
 }

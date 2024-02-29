@@ -39,7 +39,6 @@ final class ViewModel: ViewModelProtocol {
         do {
             let data = try await networkService.getDetail(id: "\(id)")
             selectedPost = data.post
-            print(selectedPost!)
         } catch {
             debugPrint(error.localizedDescription)
         }
