@@ -12,7 +12,6 @@ class PostViewCell: UITableViewCell {
     // MARK: - Properties
     private var isExpanded = false
     var expandButtonHandler: (() -> Void)?
-    private let bottomLayoutGuide = UILayoutGuide()
     // MARK: - Views
     
     private let titleLabel: UILabel = {
@@ -117,7 +116,11 @@ class PostViewCell: UITableViewCell {
     @objc func expundButtonTapped() {
         isExpanded.toggle()
         previewTextLabel.numberOfLines = isExpanded ? 0 : 2
-        previewTextLabel.layoutIfNeeded()
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            guard let self = self else { return }
+            self.previewTextLabel.layoutIfNeeded()
+        }
+        
         expundButton.setTitle(isExpanded ? "Colapse" : "Expand", for: .normal)
         expandButtonHandler?()
     }
