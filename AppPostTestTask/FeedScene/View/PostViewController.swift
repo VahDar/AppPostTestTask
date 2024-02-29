@@ -58,9 +58,10 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let menu = UIMenu(title: "Sort by", options: .displayInline, children: [sortByDate, sortByLikes])
         
-        let barButton = UIBarButtonItem(image: UIImage(named: "sorting"), menu: menu)
+        let barButton = UIBarButtonItem(image: UIImage(named: "sort"), menu: menu)
         
         navigationItem.rightBarButtonItem = barButton
+        
     }
     
     private func constraints() {
