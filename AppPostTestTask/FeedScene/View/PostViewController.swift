@@ -78,7 +78,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - FetchData
     private func fetchData() {
         Task {
-            await viewModel.getLitData()
+            await viewModel.getLitsData()
             tableView.reloadData()
         }
     }
