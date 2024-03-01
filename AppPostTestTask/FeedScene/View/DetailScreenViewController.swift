@@ -59,6 +59,12 @@ class DetailScreenViewController: UIViewController {
         return label
     }()
     
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +72,9 @@ class DetailScreenViewController: UIViewController {
 
     }
     
+    // MARKL - Setup UI
     
+    private
 
     
 
