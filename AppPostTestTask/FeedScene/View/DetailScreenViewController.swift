@@ -13,7 +13,7 @@ class DetailScreenViewController: UIViewController {
     @Injected(\.viewModel) var viewModel
     
     // MARK: - Views
-    private let detailImage: UIImageView = {
+    private let imageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
@@ -72,6 +72,10 @@ class DetailScreenViewController: UIViewController {
 
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        constreints()
+    }
     // MARKL - Setup UI
     
     private func setupUI() {
@@ -85,7 +89,39 @@ class DetailScreenViewController: UIViewController {
     }
 
     private func constreints() {
+        view.addSubview(scrollView)
+        [likeImage, likes, timeshamp, titleLabel, textLabel, imageView].forEach(scrollView.addSubview)
         
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            imageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            imageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            imageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
+            titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            
+            textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
+            textLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            textLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            
+            likeImage.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 16),
+            likeImage.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            likeImage.widthAnchor.constraint(equalToConstant: 16),
+            likeImage.heightAnchor.constraint(equalToConstant: 16),
+            
+            likes.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 16),
+            likes.leadingAnchor.constraint(equalTo: likeImage.trailingAnchor, constant: 3),
+            
+            timeshamp.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 16),
+            timeshamp.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16)
+            
+        ])
     }
 
 }
