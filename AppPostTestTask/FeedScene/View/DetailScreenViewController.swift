@@ -28,7 +28,7 @@ class DetailScreenViewController: UIViewController {
         return label
     }()
     
-    private let text: UILabel = {
+    private let textLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 11, weight: .semibold)
         label.textColor = .gray
@@ -68,14 +68,24 @@ class DetailScreenViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        setupUI()
 
     }
     
     // MARKL - Setup UI
     
-    private
+    private func setupUI() {
+        view.backgroundColor = .white
+        title = "Post"
+        likeImage.image = UIImage(named: "like")
+        likes.text = "\(viewModel.selectedPost?.likesCount ?? 0)"
+        timeshamp.text = "\(viewModel.selectedPost?.timeshamp.formattedDate() ?? "0")"
+        titleLabel.text = viewModel.selectedPost?.title
+        textLabel.text = viewModel.selectedPost?.text
+    }
 
-    
+    private func constreints() {
+        
+    }
 
 }
