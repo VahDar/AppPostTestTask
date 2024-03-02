@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailScreenViewController: UIViewController {
 
@@ -82,6 +83,7 @@ class DetailScreenViewController: UIViewController {
         view.backgroundColor = .white
         title = "Post"
         likeImage.image = UIImage(named: "like")
+        imageView.sd_setImage(with: URL(string: viewModel.selectedPost?.postImage ?? ""))
         likes.text = "\(viewModel.selectedPost?.likesCount ?? 0)"
         timeshamp.text = "\(viewModel.selectedPost?.timeshamp.formattedDate() ?? "0")"
         titleLabel.text = viewModel.selectedPost?.title
