@@ -66,6 +66,12 @@ class DetailScreenViewController: UIViewController {
         return scrollView
     }()
     
+    private let contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +98,8 @@ class DetailScreenViewController: UIViewController {
 
     private func constreints() {
         view.addSubview(scrollView)
-        [likeImage, likes, timeshamp, titleLabel, textLabel, imageView].forEach(scrollView.addSubview)
+        scrollView.addSubview(contentView)
+        [likeImage, likes, timeshamp, titleLabel, textLabel, imageView].forEach(contentView.addSubview)
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -100,20 +107,25 @@ class DetailScreenViewController: UIViewController {
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            imageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            imageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            imageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
             textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
-            textLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
-            textLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            textLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            textLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
             likeImage.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 16),
-            likeImage.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            likeImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             likeImage.widthAnchor.constraint(equalToConstant: 16),
             likeImage.heightAnchor.constraint(equalToConstant: 16),
             
@@ -121,7 +133,7 @@ class DetailScreenViewController: UIViewController {
             likes.leadingAnchor.constraint(equalTo: likeImage.trailingAnchor, constant: 3),
             
             timeshamp.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 16),
-            timeshamp.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16)
+            timeshamp.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
             
         ])
     }
