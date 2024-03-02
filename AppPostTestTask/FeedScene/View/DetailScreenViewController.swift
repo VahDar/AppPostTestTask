@@ -16,6 +16,7 @@ class DetailScreenViewController: UIViewController {
     // MARK: - Views
     private let imageView: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -34,6 +35,7 @@ class DetailScreenViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 11, weight: .semibold)
         label.textColor = .gray
         label.textAlignment = .left
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -111,6 +113,8 @@ class DetailScreenViewController: UIViewController {
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.heightAnchor.constraint(greaterThanOrEqualTo: scrollView.heightAnchor),
             
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
@@ -134,8 +138,9 @@ class DetailScreenViewController: UIViewController {
             
             timeshamp.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 16),
             timeshamp.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
-            
         ])
+        if let image = imageView.image {
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: image.size.height / image.size.width).isActive = true
+        }
     }
-
 }
