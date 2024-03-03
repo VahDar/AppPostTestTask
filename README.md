@@ -13,6 +13,8 @@
 
 - MVVM + Coordinator
 
+- DI
+
 - URLSession
 
 - SPM
